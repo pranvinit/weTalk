@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weTalk V2 - Free Messenger with Rooms</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>Welcome to weTalk V2</h1>
+        <button id="leave-btn">Leave Room</button>
+    </div>
+    <div id="main-div">
+        <div id="sidebar">
+            <div id="currRoom"><span id="roomName">Casual</span></div>
+            <ul id="userList"></ul>
+        </div>
+        <div id="message-container"></div>
+    </div>
+    <div id="footer">
+        <form action="#" id="send-container">
+            <input id="msg-input" type="text" placeholder="Enter message" required>
+            <button id="msg-submit" type="submit">SEND</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
