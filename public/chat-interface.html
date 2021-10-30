@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weTalk</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="css/chat-interface.css" type="text/css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo-container">
+            <img src="./media/favicon.png" alt="logo" width="40px">
+        </div>
+        <span id="greetings">Welcome <span id="user-name"></span></span>
+        <button id="leave-btn">Leave Room</button>
+        <!--Handling responsive components-->
+        <div id="ham-container">
+            <span class="ham-span-1"></span>
+            <span class="ham-span-2"></span>
+            <span class="ham-span-3"></span>
+        </div>
+    </div>
+    <div id="main-div">
+        <div id="sidebar">
+            <span id="roomName"></span>
+            <ul id="userList"></ul>
+        </div>
+        <div id="message-container"></div>
+    </div>
+
+    <!-- ONLY FOR MOBILE DEVICES -->
+    <div id="ham-menu">
+        <div id="sidebar">
+            <button id="res-leave-btn">Leave Room</button>
+            <span id="roomName"></span>
+            <ul id="res-userList"></ul>
+        </div>
+    </div>
+    <!-- END -->
+
+    <form action="#" id="send-container">
+        <input id="msg-input" type="text" placeholder="Enter message" required>
+        <button id="msg-submit" type="submit">SEND</button>
+    </form>
+    <div id="footer">
+        <span>&copy; 2021 weTalk - Made by Pranav Yeole</span>
+    </div>
+</body>
+
+</html>

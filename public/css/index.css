@@ -1,0 +1,183 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* index.html specific */
+
+#container-div{
+    min-height: 100vh;
+    background: linear-gradient(to right top, #2196f3, #bbdefb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass{
+    position: relative;
+    z-index: 2;
+    height: 80vh;
+    width: 40%;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 0.8rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    backdrop-filter: blur(1.2rem);
+}
+
+.circle, .square{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.circle{
+    border-radius: 50%;
+    top: 3%;
+    left: 25%;
+}
+.square{
+    border-radius: 5px;
+    bottom: 5%;
+    right: 25%;
+}
+
+.greeting{
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#animated{
+    text-transform: inherit;
+    animation: rainbow 3s infinite linear;
+}
+
+#app-header{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* rainbow animation */
+@keyframes rainbow{
+    0%{
+        color: violet;
+    }
+    14.28%{
+        color: indigo
+    }
+    28.57%{
+        color: blue;
+    }
+    42.85%{
+        color: green;
+    }
+    57.14%{
+        color: yellow;
+    }
+    71.4%{
+        color: orange;
+    }
+    85.71%{
+        color: red;
+    }
+    100%{
+        color: violet;
+    }
+}
+/* animation end */
+
+.input-container{
+    height: 20%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input{
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 60%;
+    padding: 0 20px;
+    border: 2px solid #a2a3a5;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 200ms linear;  
+}
+
+input:focus{
+    border-radius: 40px;
+    border-color: #3e6ae1;
+}
+
+label{
+    font-size: 1.35em;
+    font-weight: 600;
+    cursor: pointer;
+}
+#sub-btn{
+    border: none;
+    outline: none;
+    background-color: #3e6ae1;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: 30%;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#sub-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Handling mobile friendly design */
+@media (min-width: 300px) and (max-width: 600px) {
+    .glass{
+        min-height: 500px;
+        width: 95%;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        left: 20%;
+    }
+    .square{
+        width: 100px;
+        height: 100px;
+        bottom: -5%;
+        right: 20%;
+    }
+    .greeting{
+        font-size: 1.5em;
+    }
+    #app-header{
+        font-size: 1.65em;
+    }
+    .input-container{
+        width: 95%;
+    }
+    input{
+        width: 50%;
+    }
+    label{
+        font-size: 20px;
+    }
+}

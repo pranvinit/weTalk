@@ -5,27 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeTalk V2 - Free Messenger App with Rooms</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="./media/favicon.png" type="image/png">
+    <title>weTalk</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
 </head>
 
 <body>
-    <h1 id="app-header">Fill the form to enter</h1>
     <div id="container-div">
-        <form action="chatinterface.html">
-            <label for="name">ENTER NAME</label>
-            <input type="text" name="username" id="name" placeholder="Enter Name" required>
-            <label for="room">ENTER ROOM NAME</label>
-            <input type="text" name="room" id="room" list="roomList" placeholder="Room Name" required>
-            <datalist id="roomList">
-                <option value="General">General</option>
-                <option value="Casual">Casual</option>
-                <option value="Behaved">Behaved</option>
-            </datalist>
-            <button type="submit" id="sub-btn">SUBMIT</button>
+        <form action="chat-interface.html" class="glass">
+            <div id="greeting-container">
+                <span class="greeting">welcome to </span><span class="greeting" id="animated">weTalk</span>
+            </div>
+            <span id="app-header">Fill the form to enter</span>
+            <div class="input-container">
+                <label for="name">Enter name</label>
+                <input type="text" id="name" name="username" placeholder="Name" required>
+            </div>
+            <div class="input-container">
+                <label for="room">Enter room</label>
+                <input type="text" id="room" name="room" list="roomList" placeholder="Room Name" required>
+                <datalist id="roomList">
+                    <option value="General">General</option>
+                    <option value="Casual">Casual</option>
+                    <option value="Behaved">Behaved</option>
+                </datalist>
+            </div>
+            <button type="submit" id="sub-btn">submit</button>
         </form>
+        <div class="circle"></div>
+        <div class="square"></div>
     </div>
-
 
 </body>
 

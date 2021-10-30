@@ -5,7 +5,7 @@ const io = require('socket.io')(server);
 const path = require('path');
 const localhost = '127.0.0.1';
 const PORT = process.env.PORT || 3000;
-const botname = 'weTalk V2 BOT';
+const botname = 'weTalk BOT';
 
 /* utils functions */
 const formatMessage = require('./utils/messages');
