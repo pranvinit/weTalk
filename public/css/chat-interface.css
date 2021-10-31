@@ -181,10 +181,13 @@ form{
     overflow-y: auto;
 }
 
-#roomName{
+#roomName, #res-roomName{
     font-size: 1.85em;
     font-weight: 600;
     text-transform: uppercase;
+}
+#res-roomName{
+    margin: 10px 0;
 }
 #userList, #res-userList{
     list-style: none;
@@ -198,6 +201,9 @@ form{
     background: white;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 10px;
+}
+#res-userList{
+    margin: 0;
 }
 
 #userList li, #res-userList li{

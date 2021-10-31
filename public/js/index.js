@@ -4,6 +4,7 @@ const form = document.getElementById('send-container');
 const msgInput = document.getElementById('msg-input')
 const msgContainer = document.getElementById('message-container');
 const roomName = document.getElementById('roomName');
+const resRoomName = document.getElementById('res-roomName');
 const userList = document.getElementById('userList');
 const resUserList = document.getElementById('res-userList');
 const hamIcon = document.getElementById('ham-container')
@@ -14,7 +15,7 @@ const urlParams = new URLSearchParams(location.search);
 const [username, room] = urlParams.values();
 
 hamIcon.addEventListener('click', () => {
-    if (hamMenu.style.display == 'none') {
+    if (hamMenu.style.display !== 'flex') {
         hamMenu.style.display = 'flex';
         hamIcon.querySelector('.ham-span-1').classList.add('top')
         hamIcon.querySelector('.ham-span-2').style.backgroundColor = 'transparent';
@@ -82,6 +83,7 @@ socket.emit('join-room', { username, room })
 
 socket.on('roomUsers', ({ room, users }) => {
     roomName.innerText = `${room} room`;
+    resRoomName.innerText = `${room} room`;
     outputUsers(users);
 })
 
